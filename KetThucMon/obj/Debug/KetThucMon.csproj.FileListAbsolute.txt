@@ -1,0 +1,6 @@
+c:\users\asus\documents\visual studio 2013\Projects\KetThucMon\KetThucMon\bin\KetThucMon.dll.config
+c:\users\asus\documents\visual studio 2013\Projects\KetThucMon\KetThucMon\bin\KetThucMon.dll
+c:\users\asus\documents\visual studio 2013\Projects\KetThucMon\KetThucMon\bin\KetThucMon.pdb
+c:\users\asus\documents\visual studio 2013\Projects\KetThucMon\KetThucMon\obj\Debug\KetThucMon.csprojResolveAssemblyReference.cache
+c:\users\asus\documents\visual studio 2013\Projects\KetThucMon\KetThucMon\obj\Debug\KetThucMon.dll
+c:\users\asus\documents\visual studio 2013\Projects\KetThucMon\KetThucMon\obj\Debug\KetThucMon.pdb

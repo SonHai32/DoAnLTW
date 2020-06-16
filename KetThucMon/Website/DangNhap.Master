@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DangNhap.master.cs" Inherits="KetThucMon.Website.DangNhap" %>
+
+<%@ Register src="../TheHien/Header.ascx" tagname="Header" tagprefix="uc1" %>
+<%@ Register src="../TheHien/FormDangNhap.ascx" tagname="FormDangNhap" tagprefix="uc2" %>
+<%@ Register src="../TheHien/Footer.ascx" tagname="Footer" tagprefix="uc3" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="../Style/style.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.0.0.min.js"></script>
+    <script src="../Scripts/popper.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <uc1:Header ID="Header1" runat="server" />
+        </div>
+        <uc2:FormDangNhap ID="FormDangNhap1" runat="server" />
+        <uc3:Footer ID="Footer1" runat="server" />
+    </form>
+</body>
+</html>

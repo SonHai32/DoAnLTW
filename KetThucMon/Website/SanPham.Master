@@ -1,0 +1,26 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SanPham.master.cs" Inherits="KetThucMon.Website.SanPham" %>
+
+<%@ Register src="../TheHien/Header.ascx" tagname="Header" tagprefix="uc1" %>
+<%@ Register src="../TheHien/Product.ascx" tagname="Product" tagprefix="uc2" %>
+<%@ Register src="../TheHien/Footer.ascx" tagname="Footer" tagprefix="uc3" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        
+        </asp:ContentPlaceHolder>
+            <uc1:Header ID="Header1" runat="server" />
+        <uc2:Product ID="Product1" runat="server" />
+        <uc3:Footer ID="Footer1" runat="server" />
+    </form>
+</body>
+</html>
