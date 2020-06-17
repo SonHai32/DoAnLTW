@@ -18,6 +18,9 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+        <uc1:Header ID="Header1" runat="server" />
+        <uc2:GioHang ID="GioHang1" runat="server" />
+        <uc3:Footer ID="Footer1" runat="server" />
     </form>
 </body>
 </html>

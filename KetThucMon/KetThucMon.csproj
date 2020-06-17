@@ -343,12 +343,13 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="TheHien\FormDangNhap.ascx" />
+    <Content Include="TheHien\GioHang.ascx" />
     <Content Include="TheHien\Product.ascx" />
     <Content Include="Website\DangKy.Master" />
     <Content Include="Website\DangNhap.Master" />
-    <Content Include="TheHien\GioHang.ascx" />
     <Content Include="Website\Product.aspx" />
     <Content Include="Website\SanPham.Master" />
+    <Content Include="Website\GioHang.Master" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -5982,6 +5983,13 @@
     <Compile Include="TheHien\FormDangNhap.ascx.designer.cs">
       <DependentUpon>FormDangNhap.ascx</DependentUpon>
     </Compile>
+    <Compile Include="TheHien\GioHang.ascx.cs">
+      <DependentUpon>GioHang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TheHien\GioHang.ascx.designer.cs">
+      <DependentUpon>GioHang.ascx</DependentUpon>
+    </Compile>
     <Compile Include="TheHien\Header.ascx.cs">
       <DependentUpon>Header.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -6017,12 +6025,12 @@
     <Compile Include="Website\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TheHien\GioHang.ascx.cs">
-      <DependentUpon>GioHang.ascx</DependentUpon>
+    <Compile Include="Website\GioHang.Master.cs">
+      <DependentUpon>GioHang.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TheHien\GioHang.ascx.designer.cs">
-      <DependentUpon>GioHang.ascx</DependentUpon>
+    <Compile Include="Website\GioHang.Master.designer.cs">
+      <DependentUpon>GioHang.Master</DependentUpon>
     </Compile>
     <Compile Include="Website\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
