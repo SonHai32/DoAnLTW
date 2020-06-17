@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KetThucMon.Website
+namespace KetThucMon.TheHien
 {
 
 

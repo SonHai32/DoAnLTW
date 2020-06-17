@@ -346,6 +346,7 @@
     <Content Include="TheHien\Product.ascx" />
     <Content Include="Website\DangKy.Master" />
     <Content Include="Website\DangNhap.Master" />
+    <Content Include="TheHien\GioHang.ascx" />
     <Content Include="Website\Product.aspx" />
     <Content Include="Website\SanPham.Master" />
   </ItemGroup>
@@ -6015,6 +6016,13 @@
     </Compile>
     <Compile Include="Website\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TheHien\GioHang.ascx.cs">
+      <DependentUpon>GioHang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TheHien\GioHang.ascx.designer.cs">
+      <DependentUpon>GioHang.ascx</DependentUpon>
     </Compile>
     <Compile Include="Website\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

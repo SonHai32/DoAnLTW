@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GioHang.master.cs" Inherits="KetThucMon.Website.GioHang1" %>
+
+<%@ Register Src="../TheHien/Header.ascx" TagName="Header" TagPrefix="uc1" %>
+<%@ Register Src="../TheHien/GioHang.ascx" TagName="GioHang" TagPrefix="uc2" %>
+<%@ Register Src="../TheHien/Footer.ascx" TagName="Footer" TagPrefix="uc3" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

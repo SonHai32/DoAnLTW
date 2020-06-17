@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace KetThucMon.TheHien
+namespace KetThucMon.Website
 {
-    public partial class GioHang : System.Web.UI.UserControl
+    public partial class GioHang1 : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
