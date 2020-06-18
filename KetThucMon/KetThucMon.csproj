@@ -277,7 +277,9 @@
     <Content Include="Font\Quicksand\static\Quicksand-Regular.ttf" />
     <Content Include="Font\Quicksand\static\Quicksand-SemiBold.ttf" />
     <Content Include="QL_BAN_HANG.sql" />
+    <Content Include="Scripts\Banner.js" />
     <Content Include="Scripts\header-controller.js" />
+    <Content Include="Style\Cart.css" />
     <Content Include="Style\Font-Awsome\.DS_Store" />
     <Content Include="Style\Font-Awsome\css\.DS_Store" />
     <Content Include="Style\Font-Awsome\less\brands.less" />

@@ -1,0 +1,11 @@
+﻿.cart-info{
+    position: relative;
+}
+
+.remove-product-item{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    left: 98%;
+}

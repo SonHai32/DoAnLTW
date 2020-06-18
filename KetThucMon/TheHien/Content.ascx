@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Content.ascx.cs" Inherits="KetThucMon.TheHien.Content" %>
+<script src="../Scripts/Banner.js"></script>
 <div class="banner">
     <div class="switch-banner prev-banner">
         <i class="fal fa-chevron-left"></i>

@@ -16,18 +16,7 @@ namespace KetThucMon.TheHien
             {
                 dataOrderList.DataSource = orderList.DefaultView;
                 dataOrderList.DataBind();
-                /*                Image productImage = new Image();
-                                productImage.CssClass = "w-100";
-                                productImage.ImageUrl = "../images/" + orderList.Rows[0]["Anhhienthi"].ToString();
 
-                                Label lblProductImageContainer = new Label();
-                                lblProductImageContainer.CssClass = "x64-img";
-                                lblProductImageContainer.Width = 64;
-                                lblProductImageContainer.Height = 64;
-                                lblProductImageContainer.Controls.Add(productImage);
-
-                                lblOrderList.Controls.Add(lblProductImageContainer);
-                 * */
             }
         }
 
@@ -63,7 +52,7 @@ namespace KetThucMon.TheHien
                 Session["email"] = user_data.Rows[0]["Email"].ToString();
                 Session["diachi"] = user_data.Rows[0]["Dia_chi"].ToString();
                 Session["sodienthoai"] = user_data.Rows[0]["Dien_thoai"].ToString();
-                Response.Redirect("Default.aspx");
+                Response.Redirect(Request.RawUrl);
             }
             else
                 Response.Write("<script>alert('Danh nhap khong thanh cong')</script>");
@@ -80,6 +69,20 @@ namespace KetThucMon.TheHien
             Session["email"] = "";
 
             Response.Redirect(Request.Url.ToString(), true);
+        }
+
+        protected void showListSearchProduct(string searchKey)
+        {
+            string querySearchProduct = @"SELECT * FROM SAN_PHAM SP INNER JOIN DANH_MUC DM ON SP.Madm = DM.Madm WHERE SP.Tensp like N'%" + searchKey + "%'"
+                + @"or SP.Masp like N'%" + searchKey + "%'" + @"or SP.Madm like N'%" + searchKey + "%'" + @"or DM.Tendm like N'%" + searchKey + "%'";
+            DataTable productList = XL_DuLieu.Doc_bang(querySearchProduct);
+            productSearchList.DataSource = productList.DefaultView;
+            productSearchList.DataBind();
+        }
+
+        protected void headerSearchBox_TextChanged(object sender, EventArgs e)
+        {
+            showListSearchProduct(headerSearchBox.Text);
         }
 
     }

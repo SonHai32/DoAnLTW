@@ -68,9 +68,6 @@ namespace KetThucMon.TheHien
                     }
                 }
 
-                cart.AcceptChanges();
-                Session["order"] = cart;
-                Response.Redirect(Request.RawUrl);
 
 
             }
@@ -89,10 +86,22 @@ namespace KetThucMon.TheHien
                     }
                 }
 
-                cart.AcceptChanges();
-                Session["order"] = cart;
-                Response.Redirect(Request.RawUrl);
+
             }
+
+            if (e.CommandName == "removeFromCart")
+            {
+                for (int i = 0; i < cart.Rows.Count; i++)
+                {
+                    if (cart.Rows[i]["Masp"].ToString() == Masp)
+                    {
+                        cart.Rows.RemoveAt(i);
+                    }
+                }
+            }
+            cart.AcceptChanges();
+            Session["order"] = cart;
+            Response.Redirect(Request.RawUrl);
 
         }
 

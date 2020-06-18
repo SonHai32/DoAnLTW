@@ -1,5 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="GioHang.ascx.cs" Inherits="KetThucMon.TheHien.GioHang" %>
 
+<link href="../Style/Cart.css" rel="stylesheet" />
 
 <div class="main-container vh-100 w-100 d-flex p-4">
     <div class="cart-container  w-75 bg-white d-flex flex-column">
@@ -12,6 +13,9 @@
             <asp:DataList CssClass="w-100 " ID="listCartItem" runat="server" OnItemCommand="listCartItem_ItemCommand">
                 <ItemTemplate>
                     <div class="cart-info border d-flex">
+                        <asp:LinkButton ID="btnRemoveProduct" runat="server" CommandName="removeFromCart" CommandArgument='<%# Eval("Masp") %>' CssClass="remove-product-item">
+                                <i class="fas fa-times text-dark font-weight-bold"></i>
+                        </asp:LinkButton>
                         <asp:HyperLink ID="cartImageContainer" runat="server" Width="100" Height="100" CssClass="p-1" NavigateUrl='<%# "/Website/Product.aspx?Ma-san-pham=" + Eval("Masp") %>'>
                             <asp:Image ID="cartImage" runat="server" CssClass="w-100" ImageUrl='<%# "../images/" + Eval("Anhhienthi") %>' />
                         </asp:HyperLink>

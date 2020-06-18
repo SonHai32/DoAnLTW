@@ -4,6 +4,44 @@
 <link href="../Style/Font-Awsome/css/all.css" rel="stylesheet" />
 <script src="../Scripts/header-controller.js"></script>
 <div class="container-fluid">
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="input-group modal-title mb-3" id="searchModalLabel">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-search text-dark font-weight-bold"></i></span>
+                        </div>
+                        <asp:TextBox ID="headerSearchBox" AutoPostBack="true" OnTextChanged="headerSearchBox_TextChanged" runat="server" CssClass="form-control shadow-none" placeholder="Tìm kiếm" aria-label="Search" aria-describedby="basic-addon1"></asp:TextBox>
+                    </div>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <asp:DataList ID="productSearchList" HorizontalAlign="Right" CellPadding="3" CellSpacing="3" RepeatDirection="Vertical" CssClass="w-100" runat="server">
+                        <ItemTemplate>
+                            <div class="order-product-item d-flex align-items-center">
+                                <asp:HyperLink NavigateUrl='<%# "/Website/Product.aspx?Ma-san-pham=" + Eval("Masp") %>' Width="64" Height="64" ID="lkProductSearchList" runat="server">
+                                    <asp:Image ID="searchProductListItem" runat="server" CssClass="'w-100 h-100" ImageUrl='<%# "../images/" + Eval("Anhhienthi") %>' />
+                                </asp:HyperLink>
+                                <div class="ml-3 search-product-info d-flex flex-column justify-content-between">
+                                    <asp:HyperLink Text='<%# Eval("Tensp") %>' CssClass="text-danger font-weight-bold" NavigateUrl='<%# "/Website/Product.aspx?Ma-san-pham=" + Eval("Masp") %>' Height="30" ID="searchProductName" runat="server"></asp:HyperLink>
+                                    <asp:Label ID="searchProductPrice" Text='<%# double.Parse(Eval("Giatien").ToString()).ToString("#,### Đ") %>' Height="30" runat="server"></asp:Label>
+                                </div>
+                                <asp:Label ID="searchProductCount" runat="server" CssClass="ml-auto badge badge-dark" Text='<%# Eval("Soluong") %>'>
+                                </asp:Label>
+                            </div>
+                        </ItemTemplate>
+                    </asp:DataList>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
@@ -56,7 +94,7 @@
             </ul>
         </div>
         <div class="nav-items flex flex-row justify-center align-center">
-            <i class="fas fa-search" id='search-icon'></i>
+            <i class="fas fa-search" id='search-icon' data-toggle="modal" data-target="#searchModal"></i>
             <i class="fas fa-user user-icon" id="user-icon"></i>
             <i class="fas fa-shopping-basket" data-toggle="modal" data-target="#orderModal"></i>
 

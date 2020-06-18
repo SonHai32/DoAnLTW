@@ -13,6 +13,24 @@ namespace KetThucMon.TheHien {
     public partial class Header {
         
         /// <summary>
+        /// headerSearchBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox headerSearchBox;
+        
+        /// <summary>
+        /// productSearchList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataList productSearchList;
+        
+        /// <summary>
         /// dataOrderList control.
         /// </summary>
         /// <remarks>
