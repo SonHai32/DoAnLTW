@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KetThucMon.TheHien {
-    
-    
-    public partial class FormDangKy {
-        
+namespace KetThucMon.TheHien
+{
+
+
+    public partial class FormDangKy
+    {
+
         /// <summary>
         /// txtFullName control.
         /// </summary>
@@ -20,7 +22,16 @@ namespace KetThucMon.TheHien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFullName;
-        
+
+        /// <summary>
+        /// fullNameError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label fullNameError;
+
         /// <summary>
         /// txtPhone control.
         /// </summary>
@@ -29,7 +40,16 @@ namespace KetThucMon.TheHien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPhone;
-        
+
+        /// <summary>
+        /// phoneError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label phoneError;
+
         /// <summary>
         /// txtBirth control.
         /// </summary>
@@ -38,7 +58,7 @@ namespace KetThucMon.TheHien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBirth;
-        
+
         /// <summary>
         /// txtGender control.
         /// </summary>
@@ -47,7 +67,7 @@ namespace KetThucMon.TheHien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList txtGender;
-        
+
         /// <summary>
         /// txtAddress control.
         /// </summary>
@@ -56,7 +76,16 @@ namespace KetThucMon.TheHien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
-        
+
+        /// <summary>
+        /// addrError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label addrError;
+
         /// <summary>
         /// txtEmail control.
         /// </summary>
@@ -65,7 +94,16 @@ namespace KetThucMon.TheHien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
-        
+
+        /// <summary>
+        /// emailError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label emailError;
+
         /// <summary>
         /// txtUsername control.
         /// </summary>
@@ -74,7 +112,16 @@ namespace KetThucMon.TheHien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtUsername;
-        
+
+        /// <summary>
+        /// usernameError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label usernameError;
+
         /// <summary>
         /// txtPassword control.
         /// </summary>
@@ -83,7 +130,16 @@ namespace KetThucMon.TheHien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
-        
+
+        /// <summary>
+        /// passwordError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label passwordError;
+
         /// <summary>
         /// txtRePassword control.
         /// </summary>
@@ -92,7 +148,16 @@ namespace KetThucMon.TheHien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtRePassword;
-        
+
+        /// <summary>
+        /// repasswordError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label repasswordError;
+
         /// <summary>
         /// btnFormSubmit control.
         /// </summary>

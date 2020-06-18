@@ -5950,7 +5950,7 @@
     <Content Include="Website\TrangChu.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Code\DatHang.cs" />
+    <Compile Include="App_Code\XL_NhapLieu.cs" />
     <Compile Include="App_Code\XL_MuaHang.cs" />
     <Compile Include="App_Code\XL_DuLieu.cs" />
     <Compile Include="Global.asax.cs">

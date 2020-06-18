@@ -5,17 +5,25 @@
             <div class="form-row">
                 <div class="form-group col-md-6 col-sm-12">
                     <label for="txtFullName">Họ tên</label>
-                    <asp:TextBox ID="txtFullName" runat="server" CssClass="form-control" placeholder="Nhập họ tên"></asp:TextBox>
+                    <asp:TextBox ID="txtFullName" AutoPostBack="true" aria-describedby="fullNameCheck" OnTextChanged="txtFullName_TextChanged" runat="server" CssClass="form-control" placeholder="Nhập họ tên"></asp:TextBox>
+                    <small id="fullNameCheck" class="form-text text-danger">
+                        <asp:Label ID="fullNameError" runat="server">
+                        </asp:Label>
+                    </small>
                 </div>
                 <div class="form-group col-md-6 col-sm-12">
                     <label for="txtPhone">Sô điện thoại</label>
-                    <asp:TextBox ID="txtPhone" type="number" runat="server" CssClass="form-control" placeholder="Sô điện thoại"></asp:TextBox>
+                    <asp:TextBox ID="txtPhone" AutoPostBack="true" OnTextChanged="txtPhone_TextChanged" aria-describedby="phoneCheck" runat="server" CssClass="form-control" placeholder="Sô điện thoại"></asp:TextBox>
+                    <small id="phoneCheck" class="form-text text-danger">
+                        <asp:Label ID="phoneError" runat="server">
+                        </asp:Label>
+                    </small>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6 col-sm-12">
                     <label for="txtBirth">Ngày sinh</label>
-                    <asp:TextBox ID="txtBirth" runat="server" CssClass="form-control" placeholder="Ngày sinh" type="date"></asp:TextBox>
+                    <asp:TextBox ID="txtBirth" runat="server" AutoPostBack="true" OnTextChanged="txtBirth_TextChanged" CssClass="form-control" placeholder="Ngày sinh" type="date"></asp:TextBox>
                 </div>
                 <div class="form-group col-md-6 col-sm-12">
                     <label for="txtGender">Giới tính</label>
@@ -27,25 +35,44 @@
             </div>
             <div class="form-group">
                 <label for="txtAddress">Địa chỉ</label>
-                <asp:TextBox type="text" CssClass="form-control" ID="txtAddress" runat="server" placeholder="Nhập địa chỉ"></asp:TextBox>
+                <asp:TextBox type="text" CssClass="form-control" AutoPostBack="true" aria-describedby="addrCheck" OnTextChanged="txtAddress_TextChanged" ID="txtAddress" runat="server" placeholder="Nhập địa chỉ"></asp:TextBox>
+                <small id="addrCheck" class="form-text text-danger">
+                    <asp:Label ID="addrError" runat="server">
+                    </asp:Label>
+                </small>
             </div>
             <div class="form-group">
                 <label for="txtEmail">Địa chỉ email</label>
-                <asp:TextBox type="email" CssClass="form-control" ID="txtEmail" runat="server" aria-describedby="emailHelp" placeholder="Nhập email của bạn"></asp:TextBox>
-                <small id="emailHelp" class="form-text text-muted">Chúng tôi sẽ không cung cấp bất kì thông tin nào về email của bạn cho người khác</small>
+                <asp:TextBox CssClass="form-control" AutoPostBack="true" OnTextChanged="txtEmail_TextChanged" ID="txtEmail" runat="server" aria-describedby="emailCheck" placeholder="Nhập email của bạn"></asp:TextBox>
+                <small id="emailCkeck" class="form-text text-danger">
+                    <asp:Label ID="emailError" runat="server">
+                    </asp:Label>
+                </small>
             </div>
             <div class="form-group">
                 <label for="txtUsername">Tên đăng nhập</label>
-                <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="Nhập tên đăng nhập"></asp:TextBox>
+                <asp:TextBox ID="txtUsername" runat="server" AutoPostBack="true" aria-describedby="usernameCheck" OnTextChanged="txtUsername_TextChanged" CssClass="form-control" placeholder="Nhập tên đăng nhập"></asp:TextBox>
+                <small id="usernameCheck" class="form-text text-danger">
+                    <asp:Label ID="usernameError" runat="server">
+                    </asp:Label>
+                </small>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6 col-sm-12">
                     <label for="txtPassword">Mật khẩu</label>
-                    <asp:TextBox type="password" ID="txtPassword" runat="server" CssClass="form-control" placeholder="Nhập mật khẩu"></asp:TextBox>
+                    <asp:TextBox type="password" ID="txtPassword" AutoPostBack="true" aria-describedby="passwordCheck" runat="server" OnTextChanged="txtPassword_TextChanged" CssClass="form-control" placeholder="Nhập mật khẩu"></asp:TextBox>
+                    <small id="passwordCheck" class="form-text text-danger">
+                        <asp:Label ID="passwordError" runat="server">
+                        </asp:Label>
+                    </small>
                 </div>
                 <div class="form-group col-md-6 com-sm-12">
                     <label for="txtRePassword">Nhập lại mật khẩu</label>
-                    <asp:TextBox type="password" ID="txtRePassword" runat="server" CssClass="form-control" placeholder="Nhập lại mật khẩu"></asp:TextBox>
+                    <asp:TextBox type="password" ID="txtRePassword" AutoPostBack="true" runat="server" aria-describedby="repasswordCheck" OnTextChanged="txtRePassword_TextChanged" CssClass="form-control" placeholder="Nhập lại mật khẩu"></asp:TextBox>
+                    <small id="repasswordCheck" class="form-text text-danger">
+                        <asp:Label ID="repasswordError" runat="server">
+                        </asp:Label>
+                    </small>
                 </div>
             </div>
 
