@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KetThucMon.Website {
-    
-    
-    public partial class GioHang1 {
-        
+namespace KetThucMon.Website
+{
+
+
+    public partial class GioHang1
+    {
+
         /// <summary>
         /// head control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace KetThucMon.Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
-        
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace KetThucMon.Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// ContentPlaceHolder1 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace KetThucMon.Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
-        
+
         /// <summary>
         /// Header1 control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace KetThucMon.Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::KetThucMon.TheHien.Header Header1;
-        
+
         /// <summary>
         /// GioHang1 control.
         /// </summary>
@@ -55,8 +57,8 @@ namespace KetThucMon.Website {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::KetThucMon.TheHien.GioHang GioHang1;
-        
+        //        protected global::KetThucMon.TheHien.GioHang GioHang1;
+
         /// <summary>
         /// Footer1 control.
         /// </summary>

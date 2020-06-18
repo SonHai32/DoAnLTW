@@ -61,7 +61,8 @@ namespace KetThucMon.TheHien
                 Session["Tenkhachhang"] = user_data.Rows[0]["Ho_ten"].ToString();
                 Session["username"] = user_data.Rows[0]["Ten_dang_nhap"].ToString();
                 Session["email"] = user_data.Rows[0]["Email"].ToString();
-
+                Session["diachi"] = user_data.Rows[0]["Dia_chi"].ToString();
+                Session["sodienthoai"] = user_data.Rows[0]["Dien_thoai"].ToString();
                 Response.Redirect("Default.aspx");
             }
             else

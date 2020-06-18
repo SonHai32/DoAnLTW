@@ -96,7 +96,7 @@ namespace KetThucMon.TheHien
 
                 if (!productExisted)
                 {
-                    DataTable product = XL_DuLieu.Doc_bang(@"SELECT Masp, Tensp, Giatien, Anhhienthi FROM SAN_PHAM where Masp='" + Masp + "'");
+                    DataTable product = XL_DuLieu.Doc_bang(@"SELECT Masp, Tensp, Giatien,Size, Anhhienthi FROM SAN_PHAM where Masp='" + Masp + "'");
                     DataRow row = order.NewRow();
 
                     row["Masp"] = product.Rows[0]["Masp"];
@@ -105,6 +105,7 @@ namespace KetThucMon.TheHien
                     row["Anhhienthi"] = product.Rows[0]["Anhhienthi"];
                     row["Soluong"] = 1;
                     row["Ngaytao"] = DateTime.Now.ToString("YYYY-mm-dd");
+                    row["Size"] = product.Rows[0]["Size"];
                     order.Rows.Add(row);
                 }
 

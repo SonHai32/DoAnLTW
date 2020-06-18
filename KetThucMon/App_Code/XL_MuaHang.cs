@@ -21,6 +21,7 @@ public class XL_MuaHang
         order.Columns.Add("Soluong", typeof(int));
         order.Columns.Add("Giatien", typeof(int));
         order.Columns.Add("Ngaytao", typeof(String));
+        order.Columns.Add("Size", typeof(String));
         order.Columns.Add("Thanhtien", typeof(int), "Soluong*GiaTien");
         return order;
 

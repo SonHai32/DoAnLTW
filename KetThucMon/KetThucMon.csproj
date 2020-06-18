@@ -345,6 +345,7 @@
     <Content Include="TheHien\FormDangNhap.ascx" />
     <Content Include="TheHien\GioHang.ascx" />
     <Content Include="TheHien\Product.ascx" />
+    <Content Include="Website\Cart.aspx" />
     <Content Include="Website\DangKy.Master" />
     <Content Include="Website\DangNhap.Master" />
     <Content Include="Website\Product.aspx" />
@@ -5949,6 +5950,7 @@
     <Content Include="Website\TrangChu.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\DatHang.cs" />
     <Compile Include="App_Code\XL_MuaHang.cs" />
     <Compile Include="App_Code\XL_DuLieu.cs" />
     <Compile Include="Global.asax.cs">
@@ -6003,6 +6005,13 @@
     </Compile>
     <Compile Include="TheHien\Product.ascx.designer.cs">
       <DependentUpon>Product.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Website\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Website\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Website\DangKy.Master.cs">
       <DependentUpon>DangKy.Master</DependentUpon>

@@ -18,6 +18,12 @@ namespace KetThucMon
         protected void Session_Start(object sender, EventArgs e)
         {
             Session["Mkh"] = "";
+            Session["Tenkhachhang"] = "";
+            Session["username"] = "";
+            Session["email"] = "";
+            Session["diachi"] = "";
+            Session["sodienthoai"] = "";
+
             Session["order"] = XL_MuaHang.createOrder();
 
         }

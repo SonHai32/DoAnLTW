@@ -25,7 +25,6 @@
                                     <asp:Label ID="orderProductPrice" Text='<%# double.Parse(Eval("Giatien").ToString()).ToString("#,### Đ") %>' Height="30" runat="server"></asp:Label>
                                 </div>
                                 <asp:Label ID="orderProductCount" runat="server" CssClass="ml-auto badge badge-dark" Text='<%# Eval("Soluong") %>'>
-                                        1
                                 </asp:Label>
                             </div>
                         </ItemTemplate>
@@ -34,7 +33,7 @@
                 </div>
                 <div class="modal-footer">
 
-                    <asp:LinkButton CssClass="btn btn-success" ID="btnlinkOrder" runat="server" Text="Xem giỏ hàng">
+                    <asp:LinkButton CssClass="btn btn-success" ID="btnlinkOrder" PostBackUrl="~/Website/Cart.aspx" runat="server" Text="Xem giỏ hàng">
 
                     </asp:LinkButton>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
