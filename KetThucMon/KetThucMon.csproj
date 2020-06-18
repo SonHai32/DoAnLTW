@@ -279,6 +279,7 @@
     <Content Include="QL_BAN_HANG.sql" />
     <Content Include="Scripts\Banner.js" />
     <Content Include="Scripts\header-controller.js" />
+    <Content Include="Style\aboutus.css" />
     <Content Include="Style\Cart.css" />
     <Content Include="Style\Font-Awsome\.DS_Store" />
     <Content Include="Style\Font-Awsome\css\.DS_Store" />
@@ -344,15 +345,21 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="TheHien\AboutUS.ascx" />
+    <Content Include="TheHien\ChinhSachDoiTra.ascx" />
     <Content Include="TheHien\FormDangNhap.ascx" />
     <Content Include="TheHien\GioHang.ascx" />
     <Content Include="TheHien\Product.ascx" />
+    <Content Include="Website\AboutUs.aspx" />
     <Content Include="Website\Cart.aspx" />
+    <Content Include="Website\ChinhSachDoiTra.aspx" />
     <Content Include="Website\DangKy.Master" />
     <Content Include="Website\DangNhap.Master" />
     <Content Include="Website\Product.aspx" />
     <Content Include="Website\SanPham.Master" />
     <Content Include="Website\GioHang.Master" />
+    <Content Include="Website\AboutUs.Master" />
+    <Content Include="Website\ChinhSachDoiTra.Master" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -5959,6 +5966,20 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TheHien\AboutUS.ascx.cs">
+      <DependentUpon>AboutUS.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TheHien\AboutUS.ascx.designer.cs">
+      <DependentUpon>AboutUS.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TheHien\ChinhSachDoiTra.ascx.cs">
+      <DependentUpon>ChinhSachDoiTra.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TheHien\ChinhSachDoiTra.ascx.designer.cs">
+      <DependentUpon>ChinhSachDoiTra.ascx</DependentUpon>
+    </Compile>
     <Compile Include="TheHien\Content.ascx.cs">
       <DependentUpon>Content.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -6008,12 +6029,40 @@
     <Compile Include="TheHien\Product.ascx.designer.cs">
       <DependentUpon>Product.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Website\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Website\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Website\AboutUs.Master.cs">
+      <DependentUpon>AboutUs.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Website\AboutUs.Master.designer.cs">
+      <DependentUpon>AboutUs.Master</DependentUpon>
+    </Compile>
     <Compile Include="Website\Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Website\Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Website\ChinhSachDoiTra.aspx.cs">
+      <DependentUpon>ChinhSachDoiTra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Website\ChinhSachDoiTra.aspx.designer.cs">
+      <DependentUpon>ChinhSachDoiTra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Website\ChinhSachDoiTra.Master.cs">
+      <DependentUpon>ChinhSachDoiTra.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Website\ChinhSachDoiTra.Master.designer.cs">
+      <DependentUpon>ChinhSachDoiTra.Master</DependentUpon>
     </Compile>
     <Compile Include="Website\DangKy.Master.cs">
       <DependentUpon>DangKy.Master</DependentUpon>
