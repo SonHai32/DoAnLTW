@@ -52,6 +52,20 @@ namespace KetThucMon.TheHien
                 Session["email"] = user_data.Rows[0]["Email"].ToString();
                 Session["diachi"] = user_data.Rows[0]["Dia_chi"].ToString();
                 Session["sodienthoai"] = user_data.Rows[0]["Dien_thoai"].ToString();
+
+                DataTable cart = (DataTable)Session["order"];
+
+                if (cart.Rows.Count > 0)
+                {
+                    for (int i = 0; i < cart.Rows.Count; i++)
+                    {
+                        cart.Rows[i]["Makh"] = user_data.Rows[0]["Mkh"].ToString();
+                    }
+
+                    cart.AcceptChanges();
+                    Session["order"] = cart;
+
+                }
                 Response.Redirect(Request.RawUrl);
             }
             else

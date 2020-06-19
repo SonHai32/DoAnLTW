@@ -148,7 +148,7 @@
                             target="blank"><i class="fab fa-facebook-square text-gray"></i></a>
                     </li>
                     <li>
-                        <a href="https://github.com/lamsonhai1379" target="blank"><i class="fab fa-github-square text-gray"></i></a>
+                        <a href="https://github.com/sonhai32" target="blank"><i class="fab fa-github-square text-gray"></i></a>
                     </li>
                     <li>
                         <a

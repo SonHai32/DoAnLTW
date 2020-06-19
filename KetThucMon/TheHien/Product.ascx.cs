@@ -45,53 +45,49 @@ namespace KetThucMon.TheHien
                     HienThi(productId);
         }
 
-
-
-        protected void dataListProduct_ItemDataBound(object sender, DataListItemEventArgs e)
+        protected void dataListProduct_ItemCommand(object source, DataListCommandEventArgs e)
         {
-            lblSizeList = (Label)e.Item.FindControl("lblSizeList");
-            string[] size_list = lblSizeList.Text.Split(',');
-            lblSizeList.Text = "";
-            foreach (string size in size_list)
+            if (e.CommandName == "buy")
             {
-                Button size_btn = new Button();
-                size_btn.ID = @"btnSize" + size + "";
-                size_btn.Text = size;
-                lblSizeList.Controls.Add(size_btn);
+                string Masp = e.CommandArgument.ToString();
+                DataTable order = (DataTable)Session["order"];
+
+                bool productExisted = false;
+
+                for (int i = 0; i < order.Rows.Count; i++)
+                {
+                    if (order.Rows[i]["Masp"].ToString() == Masp)
+                    {
+                        order.Rows[i]["Soluong"] = int.Parse(order.Rows[i]["Soluong"].ToString()) + 1;
+                        productExisted = true;
+                        break;
+                    }
+                }
+
+                if (!productExisted)
+                {
+                    DataTable product = XL_DuLieu.Doc_bang(@"SELECT Masp, Tensp, Giatien,Size, Anhhienthi FROM SAN_PHAM where Masp='" + Masp + "'");
+                    DataRow row = order.NewRow();
+
+                    row["Masp"] = product.Rows[0]["Masp"];
+                    row["Tensp"] = product.Rows[0]["Tensp"];
+                    row["Giatien"] = product.Rows[0]["Giatien"];
+                    row["Anhhienthi"] = product.Rows[0]["Anhhienthi"];
+                    row["Soluong"] = 1;
+                    row["Ngaytao"] = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
+                    row["Size"] = product.Rows[0]["Size"];
+                    order.Rows.Add(row);
+                }
+
+                order.AcceptChanges();
+                Session["order"] = order;
+                Response.Redirect(Request.RawUrl);
             }
-        }
-
-
-        protected void productImage0_Click(object sender, ImageClickEventArgs e)
-        {
-
-            ImageButton mainImage = (ImageButton)dataListProduct.Items[0].FindControl("productImage");
-            ImageButton currentImage = sender as ImageButton;
-            mainImage.ImageUrl = currentImage.ImageUrl;
-        }
-
-        protected void productImage2_Click(object sender, ImageClickEventArgs e)
-        {
-
-            ImageButton mainImage = (ImageButton)dataListProduct.Items[0].FindControl("productImage");
-            ImageButton currentImage = sender as ImageButton;
-            mainImage.ImageUrl = currentImage.ImageUrl;
-        }
-
-        protected void productImage1_Click(object sender, ImageClickEventArgs e)
-        {
-            ImageButton mainImage = (ImageButton)dataListProduct.Items[0].FindControl("productImage");
-            ImageButton currentImage = sender as ImageButton;
-            mainImage.ImageUrl = currentImage.ImageUrl;
 
         }
 
-        protected void productImage3_Click(object sender, ImageClickEventArgs e)
-        {
-            ImageButton mainImage = (ImageButton)dataListProduct.Items[0].FindControl("productImage");
-            ImageButton currentImage = sender as ImageButton;
-            mainImage.ImageUrl = currentImage.ImageUrl;
 
-        }
+
+
     }
 }

@@ -1,21 +1,21 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Product.ascx.cs" Inherits="KetThucMon.TheHien.Product" %>
 
-<asp:DataList ID="dataListProduct" CssClass="w-100" OnItemDataBound="dataListProduct_ItemDataBound" runat="server">
+<asp:DataList ID="dataListProduct" CssClass="w-100" runat="server" OnItemCommand="dataListProduct_ItemCommand">
     <ItemTemplate>
         <div class="product-container flex flex-row align-center space-around ">
 
             <div class="product-img-list flex flex-column justify-center">
                 <div class="product-img flex justify-center align-center">
-                    <asp:ImageButton ID="productImage0" runat="server" CssClass="img-fit" OnClick="productImage0_Click" />
+                    <asp:ImageButton ID="productImage0" runat="server" CssClass="img-fit" />
                 </div>
                 <div class="product-img flex justify-center align-center">
-                    <asp:ImageButton ID="productImage1" runat="server" CssClass="img-fit" OnClick="productImage1_Click" />
+                    <asp:ImageButton ID="productImage1" runat="server" CssClass="img-fit" />
                 </div>
                 <div class="product-img flex justify-center align-center">
-                    <asp:ImageButton ID="productImage2" runat="server" CssClass="img-fit" OnClick="productImage2_Click" />
+                    <asp:ImageButton ID="productImage2" runat="server" CssClass="img-fit" />
                 </div>
                 <div class="product-img flex justify-center align-center">
-                    <asp:ImageButton ID="productImage3" runat="server" CssClass="img-fit" OnClick="productImage3_Click" />
+                    <asp:ImageButton ID="productImage3" runat="server" CssClass="img-fit" />
                 </div>
             </div>
             <div class="main-product-img flex justify-center align-center">
@@ -33,17 +33,10 @@
                         <h1></h1>
                     </h1>
                 </div>
-                <div class="product-size">
-                    <span class="size-title">SIZE
-                    </span>
-                    <asp:Label CssClass="size-list-btn" ID="lblSizeList" runat="server" Text='<%# Eval("Size") %>'>
-                    </asp:Label>
-                </div>
+
                 <h1 class='product-name text-black'></h1>
 
                 <div class="product-size">
-                    <span class="size-title">SIZE
-        </span>
                     <div class="size-list-btn">
                     </div>
                 </div>
@@ -52,10 +45,9 @@
         </span>
                     <input type="number" value="1" id="amount" />
                 </div>
-                <button class="add-to-card-btn">
-                    THÊM VÀO GIỎ HÀNG
-     
-                </button>
+                <asp:Button runat="server" Text="THÊM VÀO GIỎ HÀNG" CommandName="buy" CommandArgument='<%# Eval("Masp") %>' CssClass="add-to-card-btn" ID="btnAddToCard" />
+
+
             </div>
         </div>
     </ItemTemplate>

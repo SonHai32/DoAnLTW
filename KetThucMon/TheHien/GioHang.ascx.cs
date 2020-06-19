@@ -105,5 +105,37 @@ namespace KetThucMon.TheHien
 
         }
 
+        protected void btnSubmitPurcharse_Click(object sender, EventArgs e)
+        {
+            if (Session["Mkh"].ToString() != "")
+            {
+                bool addSuccess = false;
+                DataTable cart = (DataTable)Session["order"];
+                for (int i = 0; i < cart.Rows.Count; i++)
+                {
+                    string addCartQuery = @"INSERT INTO DON_HANG(Mkh, Masp, Giatien, Soluong, Size, Ngaytao) VALUES(" + cart.Rows[i]["Makh"].ToString() + ",'" + cart.Rows[i]["Masp"].ToString() + "'," + cart.Rows[i]["Giatien"].ToString() + "," + cart.Rows[i]["Soluong"].ToString() + ",'" + cart.Rows[i]["Size"].ToString() + "','" + cart.Rows[i]["Ngaytao"].ToString() + "')";
+                    if (!XL_DuLieu.Thuc_hien_lenh(addCartQuery))
+                    {
+                        addSuccess = false;
+                        break;
+                    }
+                    else
+                        addSuccess = true;
+                }
+
+                if (addSuccess)
+                {
+                    Session["order"] = XL_MuaHang.createOrder();
+                    Response.Write("<script>alert('Đặt Hàng Thành Công ^^')</script>");
+                    Response.Redirect(Request.RawUrl);
+                }
+                else
+                    Response.Write("<script>alert('!!! Có lỗi xảy ra,Không thể đặt hàng')</script>");
+
+            }
+            else
+                Response.Write("<script>alert('Vui lòng đăng nhập để tiếp tục mua hàng')</script>");
+        }
+
     }
 }

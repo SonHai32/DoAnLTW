@@ -11,11 +11,14 @@ namespace KetThucMon.TheHien
     {
         static PagedDataSource page = new PagedDataSource();
         static int currentPage = 0;
-        protected void HienThi(String filterString)
+        protected void HienThi()
         {
+
+            string categoryQuery = Request.QueryString["DanhMuc"] != null ? Request.QueryString["DanhMuc"] : "";
+
             string cau_lenh = "SELECT * FROM SAN_PHAM SP INNER JOIN DANH_MUC DM ON SP.Madm = DM.Madm";
-            if (filterString != "")
-                cau_lenh += " WHERE DM.Danhmuccha = '" + filterString + "'";
+            if (categoryQuery != "")
+                cau_lenh += " WHERE DM.Madm = '" + categoryQuery + "'";
 
             DataTable doc_bang = XL_DuLieu.Doc_bang(cau_lenh);
             page.DataSource = doc_bang.DefaultView;
@@ -37,10 +40,9 @@ namespace KetThucMon.TheHien
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            string categoryQuery = Request.QueryString["DanhMuc"] != null ? Request.QueryString["DanhMuc"] : "";
 
             if (!IsPostBack)
-                HienThi(categoryQuery);
+                HienThi();
 
         }
 
@@ -49,29 +51,25 @@ namespace KetThucMon.TheHien
         protected void lbtnFirstPage_Click(object sender, EventArgs e)
         {
             currentPage = 0;
-            string categoryQuery = Request.QueryString["DanhMuc"] != null ? Request.QueryString["DanhMuc"] : "";
-            HienThi(categoryQuery);
+            HienThi();
         }
 
         protected void lbtnPrevPage_Click(object sender, EventArgs e)
         {
             currentPage--;
-            string categoryQuery = Request.QueryString["DanhMuc"] != null ? Request.QueryString["DanhMuc"] : "";
-            HienThi(categoryQuery);
+            HienThi();
         }
 
         protected void lbtnNextPage_Click(object sender, EventArgs e)
         {
-            string categoryQuery = Request.QueryString["DanhMuc"] != null ? Request.QueryString["DanhMuc"] : "";
             currentPage++;
-            HienThi(categoryQuery);
+            HienThi();
         }
 
         protected void lbtnLastPage_Click(object sender, EventArgs e)
         {
             currentPage = page.PageCount - 1;
-            string categoryQuery = Request.QueryString["DanhMuc"] != null ? Request.QueryString["DanhMuc"] : "";
-            HienThi(categoryQuery);
+            HienThi();
         }
 
 
@@ -104,7 +102,7 @@ namespace KetThucMon.TheHien
                     row["Giatien"] = product.Rows[0]["Giatien"];
                     row["Anhhienthi"] = product.Rows[0]["Anhhienthi"];
                     row["Soluong"] = 1;
-                    row["Ngaytao"] = DateTime.Now.ToString("YYYY-mm-dd");
+                    row["Ngaytao"] = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
                     row["Size"] = product.Rows[0]["Size"];
                     order.Rows.Add(row);
                 }

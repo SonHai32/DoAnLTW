@@ -49,7 +49,7 @@
             </asp:Label>
         </div>
         <asp:Label ID="CardPurcharse" runat="server" CssClass=" d-flex align-items-end" Height="80">
-            <asp:Button ID="btnSubmitPurcharse" runat="server" Text="ĐẶT HÀNG" CssClass="btn h-100 btn-danger btn-block rounded-0" />
+            <asp:Button ID="btnSubmitPurcharse" OnClick="btnSubmitPurcharse_Click" runat="server" Text="ĐẶT HÀNG" CssClass="btn h-100 btn-danger btn-block rounded-0" />
         </asp:Label>
 
     </div>
